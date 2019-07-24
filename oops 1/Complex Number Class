@@ -1,0 +1,63 @@
+ Question 1 :::
+ A ComplexNumber class contains two data members : one is real part (R) and other is imaginary (I) (both integer).
+Implement the Complex numbers class that contains following functions -
+1. constructor
+You need to create the appropriate constructor.
+2. plus -
+This function adds two given complex numbers and updates the first complex number.
+
+
+
+
+
+
+solution:::
+Public class ComplexNumbers {
+private int real;
+    private int imaginary;
+ 
+    public ComplexNumbers(int real,int imaginary) {
+  this.real=real;
+  this.imaginary=imaginary;
+     }
+  
+    public int getReal() {
+ return real;
+     }
+  
+    public int getImaginary() {
+ return imaginary;
+     }
+  
+    public void setReal(int real) {
+ this.real=real;
+     }
+  
+    public void setImaginary(int imaginary) {
+ this.imaginary=imaginary;
+     }
+ 
+    public void plus(ComplexNumbers c2) {
+ this.real=this.real+c2.real;
+ this.imaginary=this.imaginary+c2.imaginary;
+     }
+
+    public void multiply(ComplexNumbers c2) {
+ int tempReal,tempImaginary;
+ tempReal=this.real;
+ tempImaginary=this.imaginary;
+ this.real=this.real*c2.real-this.imaginary*c2.imaginary;
+ this.imaginary=tempReal*c2.imaginary+tempImaginary*c2.real;
+ }
+    
+    public void print() {
+ System.out.println(real+" + i"+imaginary);
+    }
+}
+
+
+
+
+
+
+
